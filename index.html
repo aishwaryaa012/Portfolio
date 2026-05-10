@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aishwarya</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Scroll progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Aishwarya</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero-section">
+    <div id="particles-js"></div>
+    <div class="hero-content container">
+      <div class="hero-text" data-aos="fade-up">
+        <p class="intro">Hello, I’m</p>
+        <h1>Aishwarya S</h1>
+        <h3 class="typewriter">Electronics and Communication Student • Web & Software Enthusiast</h3>
+        <p class="desc">I build clean, responsive web apps and enjoy solving real-world problems through software.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="hero-btn">🚀 View My Work</a>
+          <a href="./Aishwarya_S_CV[3311].pdf" class="hero-btn outline" download>Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="zoom-in" data-aos-delay="150">
+        <!-- Replace kavana.png with actual photo file -->
+        <img src="./my_picture.jpeg" alt="Aishwarya">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <div class="about-card glass" data-aos="fade-up" data-aos-delay="120">
+        <div class="about-avatar">
+          <div class="avatar-fallback">A</div>
+        </div>
+        <div class="about-text">
+          <h3>Hello! I’m <span>Aishwarya</span></h3>
+          <p>
+            I am a Electronics and Communication Engineering student with knowledge of Python, HTML, CSS, and JavaScript. I enjoy solving problems and I am interested in web development and software engineering.
+          </p>
+          <ul class="about-bullets">
+            <li>College: P. E. S. College of Engineering, Mandya </li>
+            <li>Branch: Electronics and Communication</li>
+            <li>Semester: 8th Semester</li>
+          </ul>
+          <div class="about-cta">
+            <a href="./Aishwarya_S_CV[3311].pdf" class="btn" download>Download Resume</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-list" data-aos="fade-up" data-aos-delay="200">
+        <span class="skill-icon"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="skill-icon"><i class="fa-solid fa-code"></i> C</span>
+        <span class="skill-icon"><i class="fa-brands fa-html5"></i> HTML</span>
+        <span class="skill-icon"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+        <span class="skill-icon"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <!-- <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt=""> Figma</span>
+        <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt=""> Canva</span> -->
+      </div>
+    </div>
+  </section>
+
+<!-- Projects -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+
+    <div class="filter-buttons" data-aos="fade-up" data-aos-delay="120">
+      <button class="filter-btn active" onclick="filterProjects('all', event)">All</button>
+      <button class="filter-btn" onclick="filterProjects('web', event)">Web Development</button>
+      <button class="filter-btn" onclick="filterProjects('iot', event)">IoT</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card glass iot" data-aos="fade-up" onclick="openModal('proj1')">
+        <h3>IoT-Based Railway Track Discontinuity and Object Detection System</h3>
+        <p><strong>Tech:</strong> IoT, Arduino, Sensors</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card glass web" data-aos="fade-up" data-aos-delay="100" onclick="openModal('proj2')">
+        <h3>Design and Recommendation of Tourist Places Using LSTM</h3>
+        <p><strong>Tech:</strong>  Python, LSTM, Pandas </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Project Modals -->
+
+  <!-- Modal 1 -->
+  <div id="proj1" class="modal">
+    <div class="modal-content glass">
+      <span class="close" onclick="closeModal('proj1')">&times;</span>
+      <h3>IoT-Based Railway Track Discontinuity and Object Detection System (Feb 2023)</h3>
+      <p>
+        Developed a safety monitoring system to detect cracks and obstacles on railway tracks using IoT sensors.
+        Used vibration and ultrasonic sensing to identify discontinuities and obstructions.
+        Transmitted alerts wirelessly through GSM for real-time monitoring and accident prevention
+      </p>
+      <p><strong>Tools:</strong> Arduino, Sensors, IoT</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="proj2" class="modal">
+    <div class="modal-content glass">
+      <span class="close" onclick="closeModal('proj2')">&times;</span>
+      <h3>Design and Recommendation of Tourist Places Using LSTM (Feb 2024)</h3>
+      <p>
+        Developed an AI-based recommendation system that predicts and suggests tourist locations based on user interests and travel history. Used LSTM deep learning model to analyze sequential user preference patterns and generate personalized travel recommendations.
+
+      </p>
+      <p><strong>Tools:</strong> Python, LSTM, Pandas </p>
+    </div>
+  </div>
+
+</section>
+  <!-- Publications -->
+  <!-- <section id="publications" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Publications</h2>
+      <div class="publication-card glass" data-aos="fade-up" data-aos-delay="120">
+        <h3>
+          <a href="./Anti_Bike_Theft_IEEE.pdf" target="_blank" rel="noopener">Implementation of Anti Bike Theft Using Arduino</a>
+        </h3>
+        <p>Published in <strong>NCSEEE 2025</strong> — National Conference on Smart Systems and Emerging Trends in EEE, GM University.</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Certifications -->
+  <section id="certifications" class="certifications">
+    <div class="container">
+      <h2 class="section-title">🎓 Certifications & Experience</h2>
+
+<div class="cert-card">
+  <h3>Vasundara Technoogies</h3>
+  <small>IOT Based - Project Work— March 2023</small>
+</div>
+
+<div class="cert-card">
+  <h3>Automotive Axles Limited</h3>
+  <small>Break Plant — Dec 2024</small>
+</div>
+
+<!-- <div class="cert-card">
+  <h3>Ethical Hacking Workshop</h3>
+  <small>Cybersecurity Training — Jan 2024</small>
+</div> -->
+  </section>
+
+<!-- Achievements -->
+<!-- <section id="achievements" class="achievements-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">🏆 Achievements</h2>
+    <ul class="achievement-list">
+
+      <li data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-award"></i> 1st Place – Artistic Discoveries, KLE College of Engineering (2024)
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-award"></i> 3rd Place – Tech-Tatva National Science Day (2023)
+      </li>
+
+    </ul>
+  </div>
+</section> -->
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">📬 Get in Touch</h2>
+      <div class="contact-container glass" data-aos="fade-up" data-aos-delay="120">
+        <div class="contact-info">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Mysuru, Karnataka, India</p>
+          <p><i class="fas fa-envelope"></i>aishu08080@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91 9845968665</p>
+          <div class="social-icons">
+            <a href="https://github.com/aishwaryaa012" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/aishwaryasuresh28" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:aishu08080@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="wave-bg">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+        <path d="M0.00,49.98 C150.00,150.00 349.15,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Made with ❤️ by Aishwarya</p>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</body>
+</html>
